@@ -1,0 +1,23 @@
+function showDate() {
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var dayText = 'Today is : ';
+  var d = new Date();
+  var dayName = days[d.getDay()];
+
+  return dayText + dayName;
+}
+
+function showTime() {
+  var timeText = 'Current time is : ';
+  var d = new Date();
+  var hour = d.toLocaleString('en-US', { hour: 'numeric', hour12: true });
+  var min = d.toLocaleString('en-US', { minute: 'numeric', hour12: true });
+  var sec = d.toLocaleString('en-US', { second: 'numeric', hour12: true });
+  
+  var result = timeText + hour + ' : ' + min + ' : ' + sec;
+
+  return result;
+}
+
+console.log(showDate());
+console.log(showTime());
